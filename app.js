@@ -7,7 +7,8 @@ const app = express();
 // let express know about graphql queries
 app.use('/graphql', graphqlHTTP({
     // pass in a schema property
-    schema
+    schema,
+    graphiql: true
 }));
 
 app.listen(4000, () => {
